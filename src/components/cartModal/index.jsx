@@ -5,18 +5,18 @@ import { useSelector } from 'react-redux';
 function CartModal({ setModalActive }) {
 
   const modalRef = React.useRef();
-  React.useEffect(() => {
-    const modalWrapper = modalRef.current;
-    const checkClick = (event) => {
-      if (!event.path.includes(modalWrapper)) {
-        setModalActive(false);
-      }
-    };
-    document.addEventListener('click', checkClick);
-    return () => {
-      document.removeEventListener('click', checkClick);
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   const modalWrapper = modalRef.current;
+  //   const checkClick = (event) => {
+  //     if (!event.path.includes(modalWrapper)) {
+  //       setModalActive(false);
+  //     }
+  //   };
+  //   document.addEventListener('click', checkClick);
+  //   return () => {
+  //     document.removeEventListener('click', checkClick);
+  //   };
+  // }, []);
 
   const state = useSelector(state => state.watchesReducer.items)
   const cartProduct = Object.values(state)
