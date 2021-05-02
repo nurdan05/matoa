@@ -1,0 +1,104 @@
+.news {
+    overflow: hidden;
+    &__row .col-4 {
+        padding-top: 180px;
+    }
+    &__row {
+        position: relative;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        color: #777777;
+    }
+    &__suptitle {
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        color: #333333;
+        margin: 8px 0 45px;
+    }
+    &__discover {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 0.02em;
+        color: #d84727;
+        border: 2px solid #d84727;
+        box-sizing: border-box;
+        padding: 15px 45px;
+        transition: 0.3s;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #ff003b;
+            transition: all 0.35s;
+        }
+        span {
+            position: relative;
+            z-index: 2;
+        }
+        &:hover:after {
+            width: 100%;
+            color: #fff;
+        }
+        &:hover span {
+            color: #fff;
+        }
+    }
+    &__rectangle {
+        position: absolute;
+        right: -240px;
+        top: -40px;
+        z-index: -1;
+    }
+    &__image {
+        margin-top: 50px;
+        transform: rotateX(12deg) rotateY(-22deg) rotateZ(4deg);
+        border-radius: 0.25rem;
+        box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
+        transition: 0.9s;
+    }
+    &__figure {
+        perspective: 1500px;
+        &:hover img {
+            transform: rotateX(0) rotateY(182deg) rotateZ(0);
+        }
+    }
+}
+
+.line-animation {
+    stroke-dashoffset: 840;
+    stroke-dasharray: 840;
+    animation: animdash 4s infinite ease-in;
+}
+@keyframes animdash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .news__row{
+        flex-wrap: wrap;
+    }
+   .news__row .col-4{
+        width: 100%;
+    }
+    .news__row .col-4 {
+        padding-top: 40px;
+    }
+    .news__suptitle{
+        font-size: 24px;
+        line-height: 33px;
+    }
+}

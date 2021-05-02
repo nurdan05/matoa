@@ -1,0 +1,232 @@
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	&__wrapper {
+		padding: 32px 32px 40px 32px;
+		background-color: #f7f6f4;
+		width: 1110px;
+		max-height: 455px;
+		overflow: hidden;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			opacity: 0;
+		}
+	}
+	&__checkout {
+		padding-top: 24px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__promo {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #333333;
+	}
+	&__input {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #333333;
+		padding: 8px 16px;
+		margin: 0 16px 0 8px;
+	}
+	&__discount {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #01522d;
+	}
+	&__btn {
+		margin-top: 26px;
+		padding: 22px 0;
+		width: 100%;
+		background: #d84727;
+		font-family: "Taviraj";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+		border: none;
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+	}
+	&__subtotal {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #333333;
+		margin-right: 32px;
+	}
+	&__total {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__total-old-price {
+		position: relative;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #777777;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 100%;
+			height: 1px;
+			background-color: #d93f3f;
+		}
+	}
+	&__total-new-price {
+		display: block;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: 0.02em;
+		color: #333333;
+	}
+}
+
+.modal-item {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	border-bottom: 1px solid #999999;
+	&:first-child {
+		padding-top: 0;
+	}
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #f1ddc9;
+		width: 144px;
+		height: 144px;
+		margin-right: 32px;
+	}
+	&__left {
+		display: flex;
+	}
+	&__title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #333333;
+	}
+	&__old-price {
+		display: block;
+		margin-top: 2px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #777777;
+	}
+	&__new-price {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: 0.02em;
+		color: #333333;
+	}
+	&__type {
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.03em;
+		color: #555555;
+	}
+	&__message {
+		font-family: "Nunito", sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.03em;
+		color: #555555;
+	}
+	&__cart {
+		display: flex;
+		align-items: center;
+	}
+	&__count {
+		font-size: 36px;
+		line-height: 61px;
+		letter-spacing: 0.02em;
+		color: #000000;
+		margin: 0 16px;
+	}
+	&__minus,
+	&__plus {
+		font-weight: 300;
+		width: 30px;
+		height: 30px;
+		border: 1px solid transparent;
+		box-sizing: border-box;
+		color: #fff;
+		font-size: 22px;
+		cursor: pointer;
+		transition: all 0.3s;
+		background-color: #d84727;
+		outline: none;
+		&:hover {
+			background-color: #d84727;
+			color: #fff;
+		}
+	}
+	&__total {
+		display: block;
+		margin: 0 38px 0 16px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: 0.02em;
+		color: #333333;
+	}
+	&__remove {
+		background-color: transparent;
+		padding: 6px;
+		border: 2px solid #d93f3f;
+		box-sizing: border-box;
+	}
+	&__right {
+		display: flex;
+		align-items: flex-end;
+	}
+}

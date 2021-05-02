@@ -1,0 +1,124 @@
+.reviews {
+    padding-top: 120px;
+    overflow: hidden;
+    &__container {
+        position: relative;
+    }
+    &__slider {
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+    }
+    .slick-slide {
+        outline: none;
+    }
+    .slick-track {
+        display: flex;
+    }
+    &__item {
+        outline: none;
+        height: 450px;
+    }
+    .slick-arrow.slick-prev {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.3s;
+        path {
+            transition: all 0.3s;
+        }
+        &:hover {
+            path {
+                stroke: #000;
+            }
+        }
+    }
+    .slick-arrow.slick-next {
+        position: absolute;
+        left: 70px;
+        bottom: 0px;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.3s;
+        svg {
+            transform: rotate(180deg);
+        }
+        path {
+            transition: all 0.3s;
+        }
+        &:hover {
+            path {
+                stroke: #000;
+            }
+        }
+    }
+    &__rectangle {
+        position: absolute;
+        left: -220px;
+        top: -60px;
+    }
+    &__img {
+        margin-top: 70px;
+    }
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__text {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        color: #333333;
+        max-width: 510px;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        color: #333333;
+        margin: 32px 0 2px;
+    }
+    &__creator {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        color: #777777;
+    }
+}
+.line-animation__reviews {
+    stroke-dashoffset: 655;
+    stroke-dasharray: 655;
+    animation: animdash 4s infinite ease-in;
+}
+
+@keyframes animdash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@media screen and (max-width:800px){
+    .reviews__img {
+        margin-top: 40px;
+        max-width: 80%;
+    }
+}
+@media screen and (max-width:600px){
+    .reviews__row{
+        .col-6{
+            width: 100%;
+
+        }
+      flex-wrap: wrap;
+    }
+    .reviews__item{
+        height: 620px;
+    }
+}

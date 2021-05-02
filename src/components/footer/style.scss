@@ -1,0 +1,121 @@
+.footer {
+    &__top {
+        background-color: #da5e42;
+        margin-top: 45px;
+        padding-bottom: 13px;
+        padding-top: 40px;
+    }
+    &__bankcard {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__bankcard-item {
+        width: 20%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    &__row {
+        justify-content: space-between;
+    }
+    &__bottom {
+        background-color: #d84727;
+        padding: 51px 0 75px;
+        color: #fff;
+    }
+    &__addressname {
+        margin-top: 27px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 34px;
+        letter-spacing: 0.02em;
+    }
+    &__address {
+        max-width: 255px;
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        margin-bottom: 16px;
+    }
+    &__officeHour {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 34px;
+        letter-spacing: 0.02em;
+        margin-bottom: 2px;
+    }
+    &__hour {
+        max-width: 140px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 41px;
+        letter-spacing: 0.02em;
+        position: relative;
+        margin-bottom: 20px;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            left: 0;
+            bottom: 0px;
+            background-color: #fff;
+        }
+    }
+    &__inner {
+        display: flex;
+        margin-bottom: 8px;
+    }
+    &__phonesuptitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        width: 97px;
+        margin-right: 36px;
+    }
+    &__phonenumber {
+        a {
+            font-size: 16px;
+            line-height: 32px;
+            letter-spacing: 0.03em;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__socials {
+        display: flex;
+        margin-top: 24px;
+    }
+    &__icon {
+        margin-right: 25px;
+    }
+    &__link {
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .footer__title {
+        margin-top: 30px;
+    }
+    .footer__bankcard {
+        flex-wrap: wrap;
+    }
+    .footer__bankcard-item {
+        width: auto;
+        padding: 0 10px;
+    }
+    .footer__bottom {
+        padding-bottom: 35px;
+    }
+    .footer__row{
+        flex-wrap: wrap;
+    }
+}

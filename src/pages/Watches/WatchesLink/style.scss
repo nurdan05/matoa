@@ -1,0 +1,25 @@
+.watches {
+    &__links{
+        display: flex;
+        margin-top: 75px;
+    }
+    &__link {
+        a {
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: 0.02em;
+            color: #333333;
+            text-decoration: none;
+            transition: all 0.4s;
+            &:hover {
+                color: #d84727;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px){
+    .watches__links{
+    flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body {
+    margin: 0;
+    background-color: #E5E5E5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    
+}
+.row{
+    display: flex;
+}
+
+.col-2 {
+    width: 16.67%;
+}
+.col-4{
+    width: 33.33%;
+}
+.col-6{
+    width: 50%;
+}
+.col-5{
+    width: 40%;
+}
+.col-7{
+width: 60%;
+}
+.col-8{
+    width: 66.66%;
+}
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 128px;
+        height: 1px;
+        left: 0;
+        bottom: -8px;
+        background-color: #333;
+    }
+}
+.sale,
+.new{
+    position: absolute;
+    right: 24px;
+    top: -8px;
+    display: block;
+    width: 75px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background-color:#D84727;
+    text-transform: uppercase;
+}
+.new{
+    background-color: #01522D;
+    
+}
+@media screen and (max-width:700px){
+
+}
+@media screen and (max-width:1200px){
+    .container{
+        padding: 0 15px;
+    }
+}

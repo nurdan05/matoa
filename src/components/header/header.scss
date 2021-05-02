@@ -1,0 +1,177 @@
+.header {
+    padding-top: 40px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        margin-left: 40px;
+        &:first-child {
+            margin-left: 0;
+        }
+        a {
+            font-size: 20px;
+            line-height: 34px;
+            letter-spacing: 0.02em;
+            color: #333333;
+        }
+    }
+}
+.widgets {
+    display: flex;
+    align-items: start;
+    &__seacrh {
+         
+        margin-right: 45px;
+    }
+    &__user { 
+         display: flex;
+    align-items: start;
+        margin-right: 45px;
+        span {
+            font-size: 18px;
+            line-height: 31px;
+            letter-spacing: 0.02em;
+            color: #333333;
+            margin-left: 8px;
+            display: block;
+        }
+    }
+    &__cart {
+        width: 46px;
+        height: 46px;
+        background: #f1ddc9;
+        border-radius: 50%;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        position: relative;
+        .quantityproduct{
+            left: -5px;
+            top: -8px;
+            background-color: saddlebrown;
+            color: #fff;
+            padding: 3px 6px ;
+            border-radius: 50%;
+            position:absolute;
+        }
+    }
+   
+}
+
+
+@media screen and (min-width: 951px){
+    .menu__btn,
+    .widgets__seacrh--mobile,
+    .widgets__user--mobile{
+        display: none;
+    }
+    
+    }
+    @media screen and (max-width: 950px){
+        .widgets__seacrh,
+        .widgets__user,
+        .header__list{
+            display: none;
+        }
+        .widgets{
+             width: 46px;
+        }
+        .menu__btn{
+            background-color:transparent;
+            border:none;
+            outline: none;
+            padding: 0;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            right: 90px;
+            top: 55px;
+            z-index: 9;
+        }
+        .menu__btn::before,
+        .menu__btn::after{
+            content: "";
+            width: 24px;
+            height: 2px;
+            background-color: #d84727;
+            display: block;
+            transition:transform .3s;
+        }
+        .menu__btn::after{
+         margin-bottom: 0;
+         width: 24px;
+         margin-left: auto;
+    
+        }
+        .menu__btn.menu__btn--active{
+            right: 20px;
+            .menu__btn-line{
+                opacity: 0;
+                transition:opacity .3s;
+            }
+            &::after{
+                width: 26px;
+                transform:translateY(-6px) rotate(-135deg);
+            }
+            &::before{
+                width: 26px;
+                transform:translateY(6px) rotate(135deg);
+            }
+        }
+    
+        .menu__btn-line{
+            background-color: #d84727;
+            width: 24px;
+            display: block;
+            height: 2px;
+            margin-bottom: 4px;
+            margin-top: 4px;
+            opacity: 1;
+            transition:opacity 2s;
+        }
+        .header__list.header__list--active{
+            transition: 0.5s;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 8;
+        height: 100vh;
+        width: 100vw;
+        background-color:#f1ddc9;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .header__search--mobile,
+        .signin--mobile{
+            display: block;
+        }
+        }
+        .header__item{
+            margin-left: 0;
+        }
+        .widgets__seacrh--mobile,
+        .widgets__user--mobile{
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 575px){
+    
+    .header__logo{
+        display: block;
+        img{
+            width: 160px;
+        }
+    }
+    .menu__btn{
+        right: 70px;
+    }
+    }
